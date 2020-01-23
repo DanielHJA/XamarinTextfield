@@ -22,17 +22,10 @@
             <Button Grid.Column="0"
                         Grid.Row="1"
                         Text="Press Me!"
-                        Padding="5"
-                        HeightRequest="45"
-                        TextColor="DarkGreen"
-                        WidthRequest="110"
-                        HorizontalOptions="CenterAndExpand"
-                        BorderColor="DarkGreen"
-                        BorderWidth="2"
-                        IsEnabled="{ Binding Source={ x:Reference EntryField }, Path=Text.Length, Converter={ StaticResource intToBool }, FallbackValue=False }"
-                    >
+                        IsEnabled="{ Binding Source={ x:Reference EntryField }, Path=Text.Length, Converter={ StaticResource intToBool }, FallbackValue=False }">
                 <Button.Style>
-                    <Style TargetType="Button">
+                    <!-- Use basedOn to reference pre-defined style in Static resources -->
+                    <Style BasedOn="{ StaticResource MediumButtonStyle }" TargetType="Button">
                         <Style.Triggers>
                             <Trigger TargetType="Button"  Property="IsEnabled" Value="False">
                                 <Setter Property="BorderColor" Value="LightGray"/>

@@ -16,5 +16,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="OpacityConverter.cs" />
+    <Compile Remove="Constants.cs" />
   </ItemGroup>
 </Project>

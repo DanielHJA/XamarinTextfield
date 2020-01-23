@@ -8,10 +8,19 @@
              x:Class="XamarinValueConverter.App">
     <Application.Resources>
         <ResourceDictionary>
+
             <local:IntToBoolConverter x:Key="intToBool"/>
-            <local:OpacityConverter x:Key="opacityConverter"
-                                    True="1"
-                                    False="0.2"/>
+
+            <Style x:Key="MediumButtonStyle" TargetType="Button">
+                <Setter Property="HeightRequest" Value="45"/>
+                <Setter Property="TextColor" Value="DarkGreen"/>
+                <Setter Property="WidthRequest" Value="110"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+                <Setter Property="BorderColor" Value="DarkGreen"/>
+                <Setter Property="BorderWidth" Value="2"/>
+                <Setter Property="Padding" Value="5"/>
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
